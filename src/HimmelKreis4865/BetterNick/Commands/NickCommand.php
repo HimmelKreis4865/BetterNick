@@ -20,7 +20,7 @@ class NickCommand extends Command
             switch($args[0]){
                 case "set":
                 case "s":
-                    if (BetterNick::getString("set.needsPermission") === true and !$sender->hasPermission(BetterNick::getString("set.permission"))) {
+                    if (!$sender->hasPermission(BetterNick::getString("set.permission"))){
                         $sender->sendMessage(BetterNick::getString("general.nopermission"));
                         return true;
                     }
@@ -40,7 +40,7 @@ class NickCommand extends Command
 
                 case "reset":
                 case "r":
-                    if (BetterNick::getString("reset.needsPermission") === true and !$sender->hasPermission(BetterNick::getString("reset.permission"))) {
+                    if (!$sender->hasPermission(BetterNick::getString("reset.permission"))){
                         $sender->sendMessage(BetterNick::getString("general.nopermission"));
                         return true;
                     }
@@ -50,7 +50,7 @@ class NickCommand extends Command
 
                 case "adminset":
                 case "as":
-                    if (BetterNick::getString("adminset.needsPermission") === true and !$sender->hasPermission(BetterNick::getString("adminset.permission"))) {
+                    if (!$sender->hasPermission(BetterNick::getString("adminset.permission"))){
                         $sender->sendMessage(BetterNick::getString("general.nopermission"));
                         return true;
                     }
@@ -78,7 +78,7 @@ class NickCommand extends Command
 
                 case "adminreset":
                 case "ar":
-                    if (BetterNick::getString("adminreset.needsPermission") === true and !$sender->hasPermission(BetterNick::getString("adminreset.permission"))) {
+                    if (!$sender->hasPermission(BetterNick::getString("adminreset.permission"))){
                         $sender->sendMessage(BetterNick::getString("general.nopermission"));
                         return true;
                     }
@@ -97,10 +97,6 @@ class NickCommand extends Command
                     break;
                 case "realname":
                 case "rn":
-                    if (BetterNick::getString("realname.needsPermission") === true and !$sender->hasPermission(BetterNick::getString("realname.permission"))) {
-                        $sender->sendMessage(BetterNick::getString("general.nopermission"));
-                        return true;
-                    }
                     if (isset($args[1])){
                         $sender->sendMessage(BetterNick::sendRealNameAsSting($args[1]));
                     }else{
