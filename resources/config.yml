@@ -37,33 +37,28 @@ command:
 
 # Command Argument 1: /nick <argument-1> customization part.
 # those parts, you have to set:
-# needsPermission: true|false  -  If true, players needs a permission to execute that command.
 # permsision: <permission>  -  Set a permission for executing.
 # success: <message>  -  Set a success part for Argument (not for realname).
 # syntax: <syntaxpart>  -  If players used it wrongly, he'll see this error message.
 
 # IMPORTANT: All other parts are extra - explained.
 set:
-  needsPermission: true
   permission: nick.set
   success: §8[§5Nick§8] §7You successfully set your nickname to §e{nick}§7.
   syntax: "§l§cSyntax: §r§7/nick set <nick>"
 
 reset:
-  needsPermission: true
   permission: nick.reset
   success: §8[§5Nick§8] §7You successfully resest your nickname
   syntax: "§l§cSyntax: §r§7/nick reset"
 
 adminset:
-  needsPermission: true
   permission: nick.adminset
   success: §8[§5Nick§8] §7You successfully set the nick of player §a{player} §7to §e{nick}§7.
   # successByOther: <message>  -  means, the message for player that nick was changed.
   successByOther: §8[§5Nick§8] §7Your nick was changed by player §a{player}§7 to §e{nick}§7.
   syntax: "§l§cSyntax: §r§7/nick adminset <player> <nick>"
 adminreset:
-  needsPermission: true
   permission: nick.adminreset
   success: §8[§5Nick§8] §7You successfully reset the nick of player §a{player}§7.
   # successByOther: <message>  -  means, the message for player that nick was changed.
@@ -71,8 +66,6 @@ adminreset:
   syntax: "§l§cSyntax: §r§7/nick adminreset <player>"
 
 realname:
-  needsPermission: false
-  permission: nick.realname
   syntax: "§l§cSyntax: §r§7/nick realname <nickname>"
   # ---- Message ----
   # Title of the message. Below, you'll see all player names.
