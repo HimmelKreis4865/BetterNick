@@ -9,9 +9,7 @@ general:
   nopermission: §cYou do not have the permission to execute this command
   # Help message, if player uses a wrong general syntax.
   help: "§e/nick set <nickname>\n§e/nick reset\n §e/nick adminset <player> <nickname>\n §e/nick adminreset <player>\n §e/nick realname <nickname>"
-  # load message in console, to show if there are no errors.
-  load: The Plugin was loaded successfully.
-
+  
 # A custom feature are nametags that uses PurePerms as Rank management.
 ranks:
   # Set it to true to use ranks, if it's false, you can skip that category.

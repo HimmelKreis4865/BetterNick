@@ -1,6 +1,6 @@
 name: BetterNick
 author: HimmelKreis4865
-version: 1.0
-api: [3.0.0, 3.3.0]
+version: 1.0.0
+api: 3.0..0
+description: BetterNick System for your server
 main: HimmelKreis4865\BetterNick\BetterNick
-description: A PocketMine-MP Plugin to change nicknames

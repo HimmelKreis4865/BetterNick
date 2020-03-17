@@ -18,9 +18,8 @@ class BetterNick extends PluginBase
     {
         self::$instance = $this;
         $this->saveDefaultConfig();
-        $this->getServer()->getCommandMap()->register("nick", new NickCommand($this->getConfig()->getNested("command.name"), $this->getConfig()->getNested("command.description"), (array) $this->getConfig()->getNested("command.aliases")));
+        $this->getServer()->getCommandMap()->register("BetterNick", new NickCommand($this->getConfig()->getNested("command.name"), $this->getConfig()->getNested("command.description"), (array) $this->getConfig()->getNested("command.aliases")));
 	    $this->getServer()->getPluginManager()->registerEvents(new JoinListener($this), $this);
-	    $this->getServer()->getLogger()->info($this->getConfig()->getNested("general.load"));
     }
 
     /**
