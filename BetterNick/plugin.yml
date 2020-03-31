@@ -1,0 +1,6 @@
+name: BetterNick
+author: HimmelKreis4865
+version: 1.0.0
+api: 3.0.0
+description: BetterNick System for your server
+main: HimmelKreis4865\BetterNick\BetterNick
