@@ -48,9 +48,11 @@ class BetterNick extends PluginBase
     {
         $nick = ($rainbow === true ? BetterNick::getRainbowString($nick) : $nick);
         if (BetterNick::usesPurePerms() === true){
-            $player->setDisplayName(BetterNick::getRankFormat($player) . $player->getName());
+            $player->setDisplayName(BetterNick::getRankFormat($player) . $nick);
+	    $player->setNameTag(BetterNick::getRankFormat($player) . $nick);
         }
         $player->setDisplayName($nick);
+	$player->setNameTag($nick);
     }
 
     /**
